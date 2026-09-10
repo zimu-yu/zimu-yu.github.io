@@ -1,0 +1,54 @@
+locale: "en-US"
+title: "Zimu Yu"
+title_separator: "-"
+name: "Zimu Yu"
+description: "Machine Learning for Computational Biology"
+url: "https://zimu-yu.github.io"
+baseurl: ""
+repository: "zimu-yu/zimu-yu.github.io"
+
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+include:
+  - _pages
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+search: false
+breadcrumbs: false
+
+masthead_title: "Zimu Yu"
+
+author:
+  name: "Zimu Yu"
+  bio: "ML for Computational Biology | Protein Fitness Landscapes, Epistasis & Protein Engineering"
+  location: "Wuhan, China"
+  email: "202121060202@stu.zuel.edu.cn"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:202121060202@stu.zuel.edu.cn"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=flDQAnMAAAAJ"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0009-0000-1906-036X"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zimu-yu"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/zimu-yu"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0009-0000-1906-036X"
