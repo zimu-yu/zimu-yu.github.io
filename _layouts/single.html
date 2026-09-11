@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ site.locale | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>About</a>
+      {% for item in site.data.navigation.main %}
+      <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+<div class="page-shell">
+  <aside class="profile" aria-label="Author profile">
+    {% if site.author.avatar and site.author.avatar != '' %}
+    <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name | escape }}" width="160" height="160">
+    {% else %}
+    <div class="monogram" aria-hidden="true">ZY</div>
+    {% endif %}
+    <h2>{{ site.author.name }}</h2>
+    <p class="bio">{{ site.author.bio }}</p>
+    {% if site.author.location %}<p class="location">{{ site.author.location }}</p>{% endif %}
+    <ul class="profile-links">
+      {% for link in site.author.links %}
+      {% if link.url and link.url != '' %}
+      <li><a href="{{ link.url | escape }}">{{ link.label }}<span aria-hidden="true"> ↗</span></a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </aside>
+  <main id="main" class="content" tabindex="-1">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+  </main>
+</div>
+<footer class="footer"><div>© {{ 'now' | date: '%Y' }} {{ site.name }}<span>Built with Jekyll · <a href="{{ site.url }}">Personal website</a></span></div></footer>
+</body>
+</html>
