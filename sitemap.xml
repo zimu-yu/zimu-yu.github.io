@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign sorted_pages = site.pages | sort: 'url' %}{% for item in sorted_pages %}{% if item.layout == 'single' and item.url != '/404.html' and item.sitemap != false %}
+<url><loc>{{ item.url | absolute_url | xml_escape }}</loc></url>
+{% endif %}{% endfor %}
+</urlset>
