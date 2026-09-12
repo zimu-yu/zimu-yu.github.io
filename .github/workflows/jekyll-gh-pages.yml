@@ -35,6 +35,14 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Verify website output
+        run: |
+          test -s _site/index.html
+          test -s _site/cv/index.html
+          test -s _site/publications/index.html
+          test -s _site/research/index.html
+          test -s _site/resources/index.html
+          test -s _site/sitemap.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
