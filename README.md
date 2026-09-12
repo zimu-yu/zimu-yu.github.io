@@ -1,6 +1,6 @@
 # Zimu Yu · 个人学术主页
 
-参考 Catchxu 的学术主页结构：顶部导航、左侧个人资料、右侧正文。采用 Jekyll，内容使用 Markdown。保留原有研究与论文信息。
+采用 [AcademicPages](https://academicpages.github.io/) 官方学术主页结构：固定顶部导航、左侧个人资料、右侧正文，以及响应式的移动端个人链接菜单。网站继续使用 Jekyll 和 Markdown，并保留原有研究与论文信息。
 
 ## 以后只需改这些文件
 
@@ -10,7 +10,7 @@
 | 首页介绍、研究兴趣、动态 | `index.md` |
 | 论文列表 | `_pages/publications.md` |
 | 项目与研究 | `_pages/research.md` |
-| 简历页面 | `_pages/cv.md` |
+| 简历页面 | `_pages/cv.html`（只嵌入 PDF） |
 | 书籍、工具、学习资源 | `_pages/resources.md` |
 | 顶部栏目名称和顺序 | `_data/navigation.yml` |
 
@@ -41,11 +41,7 @@
 
 ## 上传 PDF 简历
 
-将文件上传到 `assets/files/Zimu_Yu_CV.pdf`，再把下面这一行加到 `_pages/cv.md`：
-
-```markdown
-[Download CV (PDF)](/assets/files/Zimu_Yu_CV.pdf)
-```
+将新版简历直接替换为 `assets/files/Zimu_Yu_CV.pdf`。CV 页面会自动嵌入并展示这份 PDF，不需要把简历正文改写成 Markdown。
 
 ## 添加资源
 
@@ -81,7 +77,7 @@ permalink: /notes/
 
 ## 样式文件
 
-`_layouts/single.html` 是共用页面布局，`assets/css/site.css` 控制字体、颜色、间距和手机适配。一般填内容不需要修改它们。现有 Minimal Mistakes 主题配置和插件保持不变；本地布局优先于主题布局。
+`_layouts/single.html` 是 AcademicPages 风格的共用页面布局，`assets/css/site.css` 控制字体、颜色、栅格、顶部导航、作者侧栏和手机适配。一般填内容不需要修改它们。本地布局优先于远程主题布局。
 
 原有论文状态与个人信息按仓库内容保留，后续请按最新情况更新。
 
@@ -91,7 +87,7 @@ permalink: /notes/
 - `index.md` 是唯一的首页，包含完整个人介绍。
 - `_pages/about.md` 保留为 /about/ 的介绍入口，不再与首页竞争同一地址。
 - 所有内容页都有独立描述；sitemap.xml 自动收集页面，robots.txt 指向站点地图。
-- 不显示尚未上传的 PDF 按钮。上传 PDF 后按简历页内注释启用。
+- CV 页面直接嵌入 `assets/files/Zimu_Yu_CV.pdf`，并在浏览器不支持内嵌时显示 PDF 链接。
 - 日期、论文状态与研究经历来自现有简历及仓库，请在情况变化时更新。
 
 ## 发布与验证

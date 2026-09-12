@@ -1,54 +1,95 @@
 <!doctype html>
 <html lang="{{ site.locale | default: 'en' }}">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title | escape }} · {{ site.title | escape }}</title>
-<meta name="description" content="{{ page.description | default: site.description | escape }}">
-{% if page.url == '/404.html' %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow">{% endif %}
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ site.title | escape }} · {{ page.title | escape }}">
-<meta property="og:description" content="{{ page.description | default: site.description | escape }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-<link rel="canonical" href="{{ page.url | absolute_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  {% if page.url == '/404.html' %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.title | escape }} · {{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="masthead">
-  <div class="masthead-inner">
-    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav aria-label="Main navigation">
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>About</a>
-      {% for item in site.data.navigation.main %}
-      <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
-      {% endfor %}
-    </nav>
-  </div>
-</header>
-<div class="page-shell">
-  <aside class="profile" aria-label="Author profile">
-    {% if site.author.avatar and site.author.avatar != '' %}
-    <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name | escape }}" width="160" height="160">
-    {% else %}
-    <div class="monogram" aria-hidden="true">ZY</div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead__inner-wrap">
+      <nav class="greedy-nav" aria-label="Main navigation">
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <ul class="visible-links">
+          {% for item in site.data.navigation.main %}
+          <li class="masthead__menu-item">
+            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main" tabindex="-1">
+    {% if page.author_profile != false %}
+    <aside class="sidebar" aria-label="Author profile">
+      <div class="author__avatar">
+        {% if site.author.avatar and site.author.avatar != '' %}
+        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name | escape }}">
+        {% else %}
+        <div class="author__monogram" aria-hidden="true">ZY</div>
+        {% endif %}
+      </div>
+
+      <div class="author__content">
+        <h2 class="author__name">{{ site.author.name }}</h2>
+        {% if site.author.bio %}<p class="author__bio">{{ site.author.bio }}</p>{% endif %}
+      </div>
+
+      <div class="author__urls-wrapper">
+        <button class="author__urls-toggle" type="button" aria-expanded="false">Follow</button>
+        <ul class="author__urls social-icons">
+          {% if site.author.location %}<li><span class="profile-icon" aria-hidden="true">●</span>{{ site.author.location }}</li>{% endif %}
+          {% if site.author.employer %}<li><span class="profile-icon" aria-hidden="true">▣</span>{{ site.author.employer }}</li>{% endif %}
+          {% for link in site.author.links %}
+          {% if link.url and link.url != '' %}
+          <li><a href="{{ link.url | escape }}"><span class="profile-icon" aria-hidden="true">{% case link.label %}{% when 'Email' %}✉{% when 'Google Scholar' %}▤{% when 'ORCID' %}◉{% when 'GitHub' %}◆{% else %}↗{% endcase %}</span>{{ link.label }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
     {% endif %}
-    <h2>{{ site.author.name }}</h2>
-    <p class="bio">{{ site.author.bio }}</p>
-    {% if site.author.location %}<p class="location">{{ site.author.location }}</p>{% endif %}
-    <ul class="profile-links">
-      {% for link in site.author.links %}
-      {% if link.url and link.url != '' %}
-      <li><a href="{{ link.url | escape }}">{{ link.label }}<span aria-hidden="true"> ↗</span></a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </aside>
-  <main id="main" class="content" tabindex="-1">
-    <h1>{{ page.title }}</h1>
-    {{ content }}
+
+    <article class="page{% if page.url == '/cv/' %} page--cv{% endif %}">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">{{ page.title }}</h1></header>
+        <section class="page__content">
+          {{ content }}
+        </section>
+      </div>
+    </article>
   </main>
-</div>
-<footer class="footer"><div>© {{ 'now' | date: '%Y' }} {{ site.name }}<span>Built with Jekyll · <a href="{{ site.url }}">Personal website</a></span></div></footer>
+
+  <footer class="page__footer">
+    <div class="page__footer-follow">
+      <ul class="social-icons">
+        {% for link in site.footer.links %}
+        <li><a href="{{ link.url | escape }}">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="page__footer-copyright">© {{ 'now' | date: '%Y' }} {{ site.name }}, Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/">Minimal Mistakes</a>.</div>
+  </footer>
+  <script>
+    document.querySelectorAll('.author__urls-toggle').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var wrapper = button.closest('.author__urls-wrapper');
+        var open = wrapper.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', String(open));
+      });
+    });
+  </script>
 </body>
 </html>

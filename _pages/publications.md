@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Publications & Manuscripts"
+title: "Publications"
 description: "Publications and manuscripts by Zimu Yu in machine learning and computational biology."
 permalink: /publications/
 author_profile: true
