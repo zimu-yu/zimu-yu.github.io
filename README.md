@@ -7,7 +7,7 @@
 | 想修改的内容 | 文件 |
 | --- | --- |
 | 名字、个人简介、所在地、邮箱、学术链接 | `_config.yml` 中的 `author` |
-| 首页介绍、研究兴趣、动态 | `_pages/about.md` |
+| 首页介绍、研究兴趣、动态 | `index.md` |
 | 论文列表 | `_pages/publications.md` |
 | 项目与研究 | `_pages/research.md` |
 | 简历页面 | `_pages/cv.md` |
@@ -84,3 +84,31 @@ permalink: /notes/
 `_layouts/single.html` 是共用页面布局，`assets/css/site.css` 控制字体、颜色、间距和手机适配。一般填内容不需要修改它们。现有 Minimal Mistakes 主题配置和插件保持不变；本地布局优先于主题布局。
 
 原有论文状态与个人信息按仓库内容保留，后续请按最新情况更新。
+
+
+## 当前页面结构
+
+- `index.md` 是唯一的首页，包含完整个人介绍。
+- `_pages/about.md` 保留为 /about/ 的介绍入口，不再与首页竞争同一地址。
+- 所有内容页都有独立描述；sitemap.xml 自动收集页面，robots.txt 指向站点地图。
+- 不显示尚未上传的 PDF 按钮。上传 PDF 后按简历页内注释启用。
+- 日期、论文状态与研究经历来自现有简历及仓库，请在情况变化时更新。
+
+## 发布与验证
+
+`jekyll-gh-pages.yml` 负责 main 分支的正式构建和发布，并支持手动运行。
+`pages.yml` 仅检查 Pull Request，不再重复发布。
+
+使用这套自定义发布流程时，恢复账号后将 Settings → Pages → Source 设为 **GitHub Actions**，
+然后在 Actions 中手动运行 “Deploy Jekyll with GitHub Pages dependencies preinstalled”。
+必须等部署成功后，公开网站才可访问。账号限制不由这些代码解除。
+
+## 搜索引擎
+
+公开访问恢复后，可在 Google Search Console 验证网站并提交
+`https://zimu-yu.github.io/sitemap.xml`。有站点地图不代表一定或立即被收录。
+
+## 内容依据
+
+教育、研究经历和技能由已有 Zimu_Yu_CV.tex 整理；论文与审稿状态沿用仓库资料。
+未补造论文录用、实验指标、获奖、项目截图或预印本链接。

@@ -1,47 +1,25 @@
-name: Deploy Jekyll site to Pages
-
+name: Check website changes
 on:
-  push:
-    branches:
-      - main
-
+  pull_request:
+    branches: [main]
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
+      - uses: actions/checkout@v4
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Check generated pages
+        run: |
+          test -s _site/index.html
+          test -s _site/cv/index.html
+          test -s _site/research/index.html
+          test -s _site/publications/index.html
+          test -s _site/resources/index.html
+          test -s _site/sitemap.xml
+          test -s _site/robots.txt

@@ -1,13 +1,18 @@
 ---
 layout: single
-title: "Publications"
+title: "Publications & Manuscripts"
+description: "Publications and manuscripts by Zimu Yu in machine learning and computational biology."
 permalink: /publications/
 author_profile: true
 ---
 
+Published work and manuscripts are listed below. Journal names for submissions indicate the venue of review, not acceptance.
+
 <sup>*</sup> Equal contribution.
 
-## 2026
+<!-- 审稿状态沿用原始资料；录用或发表后在这里更新，不要把 under review 改为已发表，除非已有正式确认。 -->
+
+## 2026 {#publications-2026}
 
 **W. Wang<sup>*</sup>, Z. Yu<sup>*</sup>, et al.**  
 *From single-sequence structure prediction to protein fitness landscapes through a composable, epistasis-aware mutation atlas.*  
@@ -24,7 +29,7 @@ Under review at **Bioinformatics**.
 Under review at **Nature Microbiology**.  
 [Code](https://github.com/xulab-research/MetaAI-research)
 
-## 2025
+## 2025 {#publications-2025}
 
 **K. Xu, Y. Du, M. Liu, Z. Yu, et al.**  
 *Causality-Induced Positional Encoding for Transformer-Based Representation Learning of Non-Sequential Features.*  
