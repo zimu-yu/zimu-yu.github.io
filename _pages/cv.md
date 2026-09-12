@@ -5,8 +5,8 @@ permalink: /cv/
 description: "Curriculum Vitae of Zimu Yu."
 ---
 
-<div style="margin-bottom: 18px;">
-If the embedded PDF below does not load, you can <a href="/assets/files/Zimu_Yu_CV.pdf">download it here.</a>
+<div style="margin-bottom: 24px;">
+A PDF version of my CV is available <a href="/assets/files/Zimu_Yu_CV.pdf">here</a>.
 </div>
 
 <embed src="/assets/files/Zimu_Yu_CV.pdf"
