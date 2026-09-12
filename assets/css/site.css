@@ -71,7 +71,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 .author__urls { display: none; margin: 0; padding: 0; list-style: none; }
 .author__urls li { margin-bottom: 5px; font-size: .75em; line-height: 1.5; white-space: nowrap; }
 .author__urls a { display: block; padding: 2px 5px 2px 0; color: inherit; font-size: 1rem; }
-.profile-icon { display: inline-block; width: 1.55em; color: var(--muted); text-align: center; font-size: .82em; }
+.profile-icon { margin-right: .35em; color: var(--muted); text-align: center; }
 
 .page__inner-wrap { width: 100%; }
 .page__title { margin: 0; color: #31373b; font-size: 2.441em; line-height: 1; }

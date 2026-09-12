@@ -11,6 +11,7 @@
   <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body>
@@ -50,11 +51,11 @@
       <div class="author__urls-wrapper">
         <button class="author__urls-toggle" type="button" aria-expanded="false">Follow</button>
         <ul class="author__urls social-icons">
-          {% if site.author.location %}<li><span class="profile-icon" aria-hidden="true">●</span>{{ site.author.location }}</li>{% endif %}
-          {% if site.author.employer %}<li><span class="profile-icon" aria-hidden="true">▣</span>{{ site.author.employer }}</li>{% endif %}
+          {% if site.author.location %}<li><i class="fas fa-fw fa-location-dot profile-icon" aria-hidden="true"></i>{{ site.author.location }}</li>{% endif %}
+          {% if site.author.employer %}<li><i class="fas fa-fw fa-building-columns profile-icon" aria-hidden="true"></i>{{ site.author.employer }}</li>{% endif %}
           {% for link in site.author.links %}
           {% if link.url and link.url != '' %}
-          <li><a href="{{ link.url | escape }}"><span class="profile-icon" aria-hidden="true">{% case link.label %}{% when 'Email' %}✉{% when 'Google Scholar' %}▤{% when 'ORCID' %}◉{% when 'GitHub' %}◆{% else %}↗{% endcase %}</span>{{ link.label }}</a></li>
+          <li><a href="{{ link.url | escape }}"><i class="{{ link.icon | default: 'fas fa-fw fa-link' }} profile-icon" aria-hidden="true"></i>{{ link.label }}</a></li>
           {% endif %}
           {% endfor %}
         </ul>
