@@ -48,5 +48,4 @@ My work includes **CAPE (NeurIPS 2025)** and manuscripts on **Cerebra-Epistasis*
 - **Research tools:** Linux, LaTeX
 - **Research areas:** protein engineering, computational biology, single-cell omics
 
-<!-- 添加 PDF 时：上传 assets/files/Zimu_Yu_CV.pdf，再取消下一行的注释。 -->
-<!-- [Download CV (PDF)](/assets/files/Zimu_Yu_CV.pdf) -->
+[Download CV (PDF)](/assets/files/Zimu_Yu_CV.pdf)
