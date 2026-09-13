@@ -13,30 +13,23 @@ redirect_from:
 
 Hi, welcome to my page!
 
-I'm Zimu Yu. I studied Statistics at Zhongnan University of Economics and Law (ZUEL). I have always enjoyed mathematics, especially probability theory and mathematical statistics. What I like most is taking a complicated problem, trying to describe it in a precise way, and then using mathematical or statistical tools to understand it. This interest gradually led me to computational biology.
+I'm Zimu Yu. I studied Statistics at Zhongnan University of Economics and Law (ZUEL). I have always liked mathematics, especially probability theory and mathematical statistics. I enjoy taking a complicated question, trying to describe it precisely, and seeing whether mathematical or statistical tools can help me understand it.
 
-I currently work as a research assistant with [Prof. Haipeng Gong's group at Tsinghua University](https://life.tsinghua.edu.cn/lifeen/info/1034/1086.htm), [Prof. Yunxin Xu's group at ZUEL](https://tsxy.zuel.edu.cn/2025/0527/c14199a392774/page.htm), and [Prof. Xiaobo Sun's group at Emory University](https://med.emory.edu/directory/profile/?u=XSUN28). These experiences have given me the chance to work on quite different biological problems, from protein mutations and fitness landscapes to single-cell and multi-omics data.
+I did not start out knowing that I would work in computational biology. I gradually became interested in it through research, and I currently work as a research assistant with [Prof. Haipeng Gong's group at Tsinghua University](https://life.tsinghua.edu.cn/lifeen/info/1034/1086.htm), [Prof. Yunxin Xu's group at ZUEL](https://tsxy.zuel.edu.cn/2025/0527/c14199a392774/page.htm), and [Prof. Xiaobo Sun's group at Emory University](https://med.emory.edu/directory/profile/?u=XSUN28).
 
-Most of my recent work has focused on understanding how mutations affect protein function, especially when multiple mutations interact with one another. I am interested in whether we can learn from a relatively small number of experiments and still make useful predictions over much larger combinatorial spaces. I also care about how structural information, statistical modeling, and machine learning can be combined to make these predictions more interpretable and efficient.
+Most of my recent work has focused on protein fitness landscapes, mutation effect prediction, and mutational epistasis. I am especially interested in how we can learn useful rules from limited experimental data and use them to understand much larger mutation spaces. I have also worked on single-cell and multi-omics data.
 
-Alongside protein modeling, I have also worked on representation learning for single-cell and multi-omics data. Although these problems look quite different on the surface, I find the same question appearing again and again: how can we find useful structure in complicated biological data, and turn that structure into models that help us understand something rather than only produce a prediction?
+I hope to pursue a Ph.D. and continue working at the intersection of mathematics, machine learning, and computational biology. I care about whether a model works, but I also want to understand why it works and what we can learn from it.
 
-I hope to pursue a Ph.D. and continue exploring questions at the intersection of mathematics, machine learning, and computational biology. I care not only about whether a model works, but also about why it works, what assumptions it makes, and what we can learn from it.
+If you work on similar questions, I would be very happy to hear from you. Feel free to reach out by email.
 
-If you happen to work on similar problems, I would be very happy to hear from you. Feel free to reach out by email.
+## Research interests
 
-## Research interests 🔬
+Protein fitness landscapes, mutational epistasis, protein variant effect prediction, protein engineering, statistical machine learning, and computational biology.
 
-My current interests are mainly in **protein variant effect prediction**, **protein fitness landscapes**, **mutational epistasis**, and **protein engineering**. I am especially interested in models that can learn from sparse experimental measurements, represent interactions between mutations, and efficiently explore large combinatorial sequence spaces.
+## Recent updates
 
-I am also interested in **statistical machine learning**, **representation learning**, and their applications to **single-cell and multi-omics data**. More broadly, I enjoy problems where mathematical structure and biological questions can inform each other.
-
-You can find more details on my [Research](/research/) and [Publications](/publications/) pages.
-
-## Recent updates ✨
-
-- **2026** — Our work on a composable, structure- and epistasis-aware mutation atlas is available as a bioRxiv preprint and is currently under review at *Nature Machine Intelligence*.
-- **2026** — Our work on RADAR, a marker-free framework for anomalous-cell discovery across multi-sample and multimodal single-cell omics, is currently under review at *Bioinformatics*.
-- **2026** — Our work on MetaAI and cellular sequence–metabolite landscapes is currently under peer review at *Nature Microbiology*.
-- **2025** — CAPE, our work on causality-aware positional encoding for non-sequential features, was accepted to **NeurIPS 2025**.
-- **2025** — I received my B.S. in Statistics from ZUEL.
+- **Sep 2026** — Our MetaAI manuscript is in peer review at *Nature Microbiology*.
+- **2026** — Our Cerebra-Epistasis manuscript is available as a bioRxiv preprint and is under review at *Nature Machine Intelligence*.
+- **2026** — Our RADAR manuscript is under review at *Bioinformatics*.
+- **2025** — CAPE was accepted to NeurIPS 2025.
