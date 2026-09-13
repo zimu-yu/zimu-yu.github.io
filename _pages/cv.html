@@ -3,11 +3,26 @@ layout: single
 title: "Curriculum Vitae (CV)"
 permalink: /cv/
 description: "Curriculum Vitae of Zimu Yu."
+author_profile: true
 ---
 
+<style>
+  .pdf-viewer {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 150px);
+    min-height: 760px;
+    border: 1px solid #f2f3f3;
+    background: #f7f7f7;
+  }
+  @media (max-width: 925px) {
+    .pdf-viewer { height: calc(100vh - 220px); min-height: 620px; }
+  }
+</style>
+
 <object class="pdf-viewer"
-        data="{{ '/assets/files/Zimu_Yu_CV.pdf#view=FitH' | relative_url }}"
+        data="{{ '/files/Zimu_Yu_CV.pdf#view=FitH' | relative_url }}"
         type="application/pdf"
         aria-label="Zimu Yu curriculum vitae PDF">
-  <p>Your browser cannot display the PDF inline. <a href="{{ '/assets/files/Zimu_Yu_CV.pdf' | relative_url }}">Open the CV PDF</a>.</p>
+  <p>Your browser cannot display the PDF inline. <a href="{{ '/files/Zimu_Yu_CV.pdf' | relative_url }}">Open the CV PDF</a>.</p>
 </object>

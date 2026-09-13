@@ -1,110 +1,101 @@
-# Zimu Yu · 个人学术主页
+# Academic Pages
+**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
-采用 [AcademicPages](https://academicpages.github.io/) 官方学术主页结构：固定顶部导航、左侧个人资料、右侧正文，以及响应式的移动端个人链接菜单。网站继续使用 Jekyll 和 Markdown，并保留原有研究与论文信息。
+![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
 
-## 以后只需改这些文件
+# Getting Started
 
-| 想修改的内容 | 文件 |
-| --- | --- |
-| 名字、个人简介、所在地、邮箱、学术链接 | `_config.yml` 中的 `author` |
-| 首页介绍、研究兴趣、动态 | `index.md` |
-| 论文列表 | `_pages/publications.md` |
-| 项目与研究 | `_pages/research.md` |
-| 简历页面 | `_pages/cv.html`（只嵌入 PDF） |
-| 书籍、工具、学习资源 | `_pages/resources.md` |
-| 顶部栏目名称和顺序 | `_data/navigation.yml` |
+1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
+1. Click the "Use this template" button in the top right.
+1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
+1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
+1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
+1. Check status by going to the repository settings, in the "GitHub pages" section
+1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
-在 GitHub 打开相应文件 → 点击铅笔编辑 → 保存提交。GitHub Pages 构建完成后网站更新。保留每个 Markdown 文件顶部两条 `---` 之间的配置。
+See more info at https://academicpages.github.io/
 
-## 换头像
+### Additional Tutorials
 
-上传照片到 `assets/images/avatar.jpg`，然后在 `_config.yml` 的 `author:` 下增加（注意两个空格缩进）：
+Additional tutorials for working with the Academic Pages template can be found at the following sites:
+- https://jayrobwilliams.com/posts/2020/06/academic-website/
 
-```yaml
-  avatar: "/assets/images/avatar.jpg"
+## Running locally
+
+When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+
+1. Clone the repository and made updates as detailed above.
+
+### Using a different IDE
+1. Make sure you have ruby-dev, bundler, and nodejs installed
+    
+    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
+    ```bash
+    sudo apt install ruby-dev ruby-bundler nodejs
+    ```
+    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
+
+    On MacOS the commands are:
+    ```bash
+    brew install ruby
+    brew install node
+    gem install bundler
+    ```
+1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+
+    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
+    Install Gems Locally (Recommended):
+    ```bash
+    bundle config set --local path 'vendor/bundle'
+    ```
+    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+
+1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
+    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+
+If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+
+## Using Docker
+
+Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
+
+You can build and execute the container by running the following command in the repository:
+
+```bash
+chmod -R 777 .
+docker compose up
 ```
 
-没有设置头像时显示 ZY 字母头像。不会使用他人的照片。
+You should now be able to access the website from `localhost:4000`.
 
-## 添加一篇论文
+### Using the DevContainer in VS Code
 
-复制到 `_pages/publications.md` 对应年份下面，用真实信息替换：
+If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
 
-```markdown
-**作者一, Zimu Yu, 作者三.**  
-*论文完整标题.*  
-会议 / 期刊，年份。  
-[Paper](https://实际论文链接) · [Code](https://实际代码链接)
-```
+# Maintenance
 
-没有公开论文或代码链接时，删掉相应链接，不要保留示例地址。
+Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
 
-## 上传 PDF 简历
+This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
 
-将新版简历直接替换为 `assets/files/Zimu_Yu_CV.pdf`。CV 页面会自动嵌入并展示这份 PDF，不需要把简历正文改写成 Markdown。
+## Bugfixes and enhancements
 
-## 添加资源
+If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
 
-在 `_pages/resources.md` 的相应分类下面新增：
+Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
 
-```markdown
-- [资源名称](https://实际链接) — 一句话说明。
-```
-
-## 新增栏目
-
-在 `_pages/` 新建 Markdown 文件，例如 `notes.md`：
-
-```markdown
 ---
-title: "Notes"
-permalink: /notes/
----
+<div align="center">
+    
+![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
+[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-这里写正文。
-```
-
-然后在 `_data/navigation.yml` 的 `main:` 列表末尾添加：
-
-```yaml
-  - title: "Notes"
-    url: /notes/
-```
-
-## GitHub Pages
-
-仓库 Settings → Pages → Build and deployment，选择 **Deploy from a branch**，分支 **main**，目录 **/(root)**。页面地址为 https://zimu-yu.github.io 。如果已有发布配置，保留原配置即可。
-
-## 样式文件
-
-`_layouts/single.html` 是 AcademicPages 风格的共用页面布局，`assets/css/site.css` 控制字体、颜色、栅格、顶部导航、作者侧栏和手机适配。一般填内容不需要修改它们。本地布局优先于远程主题布局。
-
-原有论文状态与个人信息按仓库内容保留，后续请按最新情况更新。
-
-
-## 当前页面结构
-
-- `index.md` 是唯一的首页，包含完整个人介绍。
-- `_pages/about.md` 保留为 /about/ 的介绍入口，不再与首页竞争同一地址。
-- 所有内容页都有独立描述；sitemap.xml 自动收集页面，robots.txt 指向站点地图。
-- CV 页面直接嵌入 `assets/files/Zimu_Yu_CV.pdf`，并在浏览器不支持内嵌时显示 PDF 链接。
-- 日期、论文状态与研究经历来自现有简历及仓库，请在情况变化时更新。
-
-## 发布与验证
-
-`jekyll-gh-pages.yml` 负责 main 分支的正式构建和发布，并支持手动运行。
-`pages.yml` 仅检查 Pull Request，不再重复发布。
-
-使用这套自定义发布流程时，恢复账号后将 Settings → Pages → Source 设为 **GitHub Actions**，
-然后在 Actions 中手动运行 “Deploy Jekyll with GitHub Pages dependencies preinstalled”。
-必须等部署成功后，公开网站才可访问。账号限制不由这些代码解除。
-
-## 搜索引擎
-
-公开访问恢复后，可在 Google Search Console 验证网站并提交
-`https://zimu-yu.github.io/sitemap.xml`。有站点地图不代表一定或立即被收录。
-
-## 内容依据
-
-教育、研究经历和技能由已有 Zimu_Yu_CV.tex 整理；论文与审稿状态沿用仓库资料。
-未补造论文录用、实验指标、获奖、项目截图或预印本链接。
+[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
+[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
+</div>

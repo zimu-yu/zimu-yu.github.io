@@ -42,8 +42,12 @@ jobs:
           test -s _site/publications/index.html
           test -s _site/research/index.html
           test -s _site/resources/index.html
+          test -s _site/files/Zimu_Yu_CV.pdf
+          test -s _site/images/Zimu_Yu.png
           test -s _site/assets/files/Zimu_Yu_CV.pdf
           test -s _site/assets/images/Zimu_Yu.png
+          test -s _site/assets/css/main.css
+          test -s _site/assets/js/main.min.js
           test -s _site/sitemap.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

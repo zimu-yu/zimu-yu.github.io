@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: archive
 title: "Publications"
 description: "Publications and manuscripts by Zimu Yu in machine learning and computational biology."
 permalink: /publications/
