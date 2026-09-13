@@ -17,7 +17,7 @@ I'm Zimu Yu. I studied Statistics at Zhongnan University of Economics and Law (Z
 
 I did not start out knowing that I would work in computational biology. I gradually became interested in it through research, and I currently work as a research assistant with [Prof. Haipeng Gong's group at Tsinghua University](https://life.tsinghua.edu.cn/lifeen/info/1034/1086.htm), [Prof. Yunxin Xu's group at ZUEL](https://tsxy.zuel.edu.cn/2025/0527/c14199a392774/page.htm), and [Prof. Xiaobo Sun's group at Emory University](https://med.emory.edu/directory/profile/?u=XSUN28).
 
-Most of my recent work has focused on protein fitness landscapes, mutation effect prediction, and mutational epistasis. I am especially interested in how we can learn useful rules from limited experimental data and use them to understand much larger mutation spaces. I have also worked on single-cell and multi-omics data.
+Most of my recent work has focused on protein fitness landscapes, mutation effect prediction, and mutational epistasis. I am especially interested in how we can learn from a limited number of experiments and make predictions in much larger mutation spaces. I have also worked on single-cell and multi-omics data.
 
 I hope to pursue a Ph.D. and continue working at the intersection of mathematics, machine learning, and computational biology. I care about whether a model works, but I also want to understand why it works and what we can learn from it.
 
@@ -25,11 +25,11 @@ If you work on similar questions, I would be very happy to hear from you. Feel f
 
 ## Research interests
 
-Protein fitness landscapes, mutational epistasis, protein variant effect prediction, protein engineering, statistical machine learning, and computational biology.
+I am particularly interested in protein fitness landscapes, mutational epistasis, protein variant effect prediction, and protein engineering. More broadly, I am interested in statistical machine learning for biological problems.
 
 ## Recent updates
 
-- **Sep 2026** — Our MetaAI manuscript is in peer review at *Nature Microbiology*.
-- **2026** — Our Cerebra-Epistasis manuscript is available as a bioRxiv preprint and is under review at *Nature Machine Intelligence*.
-- **2026** — Our RADAR manuscript is under review at *Bioinformatics*.
+- **2026** — Cerebra-Epistasis is available as a bioRxiv preprint and is under review at *Nature Machine Intelligence*.
+- **2026** — RADAR is under review at *Bioinformatics*.
+- **2026** — MetaAI is under review at *Nature Microbiology*.
 - **2025** — CAPE was accepted to NeurIPS 2025.
