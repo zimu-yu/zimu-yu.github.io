@@ -5,53 +5,55 @@ permalink: /research/
 description: "Research projects by Zimu Yu in protein fitness landscapes, epistasis, protein design, and single-cell representation learning."
 ---
 
-I develop and evaluate computational models for biological data, from combinatorial protein variants to heterogeneous cell populations.
+My research focuses on machine learning for computational biology, particularly protein fitness landscapes, mutational epistasis, protein engineering, and representation learning for biological data.
 
-## Cerebra-Epistasis
+---
 
-**Reusable mutation representations for protein fitness landscapes**
+## From single-sequence structure prediction to protein fitness landscapes through a composable, epistasis-aware mutation atlas
 
-Predicting each protein variant independently can make it difficult to explore large combinatorial landscapes. Cerebra-Epistasis builds a reusable mutation atlas from a single wild-type protein encoding and assembles mutation-specific components to predict multi-mutant fitness and epistasis.
+**Cerebra-Epistasis · 2026**  
+*bioRxiv preprint; under review at Nature Machine Intelligence*
 
-**My contribution.** I co-designed the initial framework and implemented the fitness and epistasis system downstream of Cerebra-Seq, including additive-effect, higher-order epistasis, mutation-atlas, and component-assembly modules. I also conducted training, benchmarking, result analysis, and manuscript work.
+Cerebra-Epistasis is an end-to-end, structure-aware framework for multi-mutant fitness prediction. It encodes a wild-type protein once to construct a reusable mutation atlas containing single-mutation effects and epistatic representations, which can then be assembled to predict arbitrary-order mutant fitness and epistasis. This design enables efficient exploration of large combinatorial fitness landscapes without repeatedly encoding every mutant sequence.
 
-*Protein fitness · Higher-order epistasis · Structure-aware learning*
+**My contribution.** I co-designed the framework and designed and implemented the fitness and epistasis modeling system downstream of Cerebra-Seq, including the mutation atlas, additive-effect modeling, higher-order epistasis modeling, and arbitrary-order component assembly. I also conducted model training, benchmarking, structural and epistasis analyses, figure preparation, and manuscript development.
 
-[Code](https://github.com/Gonglab-THU/Cerebra-Epistasis) · [Manuscript details](/publications/#publications-2026)
+[Code](https://github.com/Gonglab-THU/Cerebra) · [Publication details](/publications/#publications-2026)
 
-## MetaAI
+---
 
-**Sequence–metabolite landscape learning from sparse observations**
+## Deciphering the cellular sequence-metabolite synthetic landscape enables predictive design by MetaAI
 
-Experimental measurements cover only a small fraction of possible mutation combinations. MetaAI studies how sequence and structural representations can support landscape reconstruction, higher-order epistasis prediction, and the design of protein variants from limited data.
+**MetaAI · 2026**  
+*Under review at Nature Microbiology*
 
-**My contribution.** I designed and implemented the computational modeling component for sequence–metabolite landscape reconstruction, epistasis prediction, and protein-variant design.
+MetaAI studies how sparse experimentally measured variants can be used to reconstruct cellular sequence–metabolite landscapes and predict unseen combinatorial mutations. By integrating sequence and structure-related representations with higher-order interaction modeling, the framework supports low-data prediction of mutant fitness, epistasis, and high-performing protein variants.
 
-*Low-data learning · Landscape reconstruction · Protein engineering*
+**My contribution.** I proposed and implemented the arbitrary-order epistasis modeling component and designed higher-order factorization methods for modeling combinatorial mutation effects. I also contributed to low-N benchmarking, computational analyses, and evaluation of higher-order mutation prediction.
 
-[Code](https://github.com/xulab-research/MetaAI-research) · [Manuscript details](/publications/#publications-2026)
+[Code](https://github.com/xulab-research/MetaAI-research) · [Publication details](/publications/#publications-2026)
 
-## RADAR
+---
 
-**Marker-free discovery of anomalous cells**
+## RADAR enables marker-free fine-grained discovery of anomalous cells in multi-sample and multimodal single-cell omics
 
-Cell populations vary across samples and measurement modalities. RADAR provides a framework for marker-free anomalous-cell detection, cross-sample and cross-modal alignment, and fine-grained analysis of single-cell omics.
+**RADAR · 2026**  
+*Manuscript under review*
 
-**My contribution.** I co-implemented the framework and codebase, conducted experiments and analyses, prepared results and figures, and contributed to manuscript writing and revision.
+RADAR is a generative framework for marker-free discovery of anomalous cell populations across multi-sample and multimodal single-cell datasets. It integrates anomalous-cell detection, cross-sample and cross-modal alignment, and fine-grained anomalous-cell resolution within a unified three-stage framework.
 
-*Single-cell omics · Anomaly detection · Multimodal learning*
+**My contribution.** I co-implemented the framework and experimental pipeline, conducted extensive benchmarking and downstream analyses across scRNA-seq, scATAC-seq, and spatial transcriptomics datasets, prepared figures and results, and contributed substantially to manuscript development.
 
-[Code](https://github.com/Catchxu/RADAR) · [Manuscript details](/publications/#publications-2026)
+[Code](https://github.com/Catchxu/RADAR) · [Publication details](/publications/#publications-2026)
 
-## CAPE
+---
 
-**Causality-aware positional encoding for non-sequential features**
+## Causality-Induced Positional Encoding for Transformer-Based Representation Learning of Non-Sequential Features
 
-Many biological features do not have a natural sequence order, but still have dependencies that matter for learning. CAPE investigates causality-induced positional encoding for Transformer-based representation learning of non-sequential features.
+**CAPE · NeurIPS 2025**
 
-**My contribution.** I ran benchmark and baseline experiments and evaluated comparative performance across synthetic and real-world multi-omics datasets.
+CAPE introduces causality-aware positional encoding for Transformer models operating on non-sequential features. It learns latent causal structure among features, embeds the resulting causal graph in hyperbolic space, and transforms these representations into rotary positional encodings for self-attention.
 
-*Representation learning · Transformers · Multi-omics*  
-**NeurIPS 2025**
+**My contribution.** I conducted benchmark and baseline experiments and evaluated comparative performance across synthetic and real-world multi-omics datasets.
 
 [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/hash/e16657b9f07021c5554bf9661f18dfcc-Abstract-Conference.html) · [Code](https://github.com/Catchxu/CAPE)
