@@ -1,3 +1,14 @@
+---
+layout: single
+title: "About me"
+permalink: /
+description: "Zimu Yu (余自牧) studies machine learning for computational biology, protein fitness landscapes, epistasis, and protein engineering."
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
+
 ## About me 👋
 
 Hi, welcome to my page!
