@@ -10,7 +10,7 @@ author_profile: true
 
 ## Journal Articles and Manuscripts
 
-- Weizhe Wang<sup>&#42;</sup>, **Zimu Yu<sup>&#42;</sup>**, Endi Yang, Ziyu Shi, Shize Yu, Jian Hu, Yunxin Xu, and Haipeng Gong. From single-sequence structure prediction to protein fitness landscape through a composable, epistasis-aware mutation atlas. *bioRxiv* preprint, 2026. Under review at *Nature Biotechnology*. [Preprint](https://doi.org/10.64898/2026.09.24.753701) | [Code](https://github.com/xulab-research/Cerebra-Epistasis)
+- Weizhe Wang<sup>&#42;</sup>, **Zimu Yu<sup>&#42;</sup>**, Endi Yang, Ziyu Shi, Shize Yu, Jian Hu, Yunxin Xu, and Haipeng Gong. From single-sequence structure prediction to protein fitness landscape through a composable, epistasis-aware mutation atlas. *bioRxiv* preprint, 2026. Under review at *Nature Biotechnology*. [Preprint](https://doi.org/10.64898/2026.09.24.753701) · [Code](https://github.com/xulab-research/Cerebra-Epistasis)
 
 - Kaichen Xu<sup>&#42;</sup>, **Zimu Yu<sup>&#42;</sup>**, Zhongkun Qu<sup>&#42;</sup>, Kainan Liu, Yunxin Xu, Hao Wu, and Xiaobo Sun. RADAR enables marker-free fine-grained discovery of anomalous cells in multi-sample and multimodal single-cell omics. Manuscript, 2026. Under review at *Bioinformatics*. [Code](https://github.com/Catchxu/RADAR)
 
