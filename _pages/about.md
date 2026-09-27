@@ -27,7 +27,7 @@ I am particularly interested in protein fitness landscapes, mutational epistasis
 
 ## Recent updates
 
-- **2026** — Cerebra-Epistasis is available as a bioRxiv preprint and is under review at *Nature Biotechnology*.
+- **2026** — Cerebra-Epistasis is under review at *Nature Biotechnology*.
 - **2026** — RADAR is under review at *Bioinformatics*.
 - **2026** — MetaAI is under review at *Nature Microbiology*.
 - **2025** — CAPE was accepted to NeurIPS 2025.
