@@ -17,6 +17,6 @@ RADAR is a generative adversarial framework that combines anomalous-cell detecti
 
 Evaluations across modalities, platforms, species, tissues, and diseases demonstrate its ability to discover anomalous cells and distinguish their compositional heterogeneity across samples. The framework supports analyses of scRNA-seq, scATAC-seq, and spatial transcriptomics data.
 
-**Status:** Manuscript under review.
+**Status:** Manuscript under revision at Briefings in Bioinformatics.
 
 [Code](https://github.com/Catchxu/RADAR)

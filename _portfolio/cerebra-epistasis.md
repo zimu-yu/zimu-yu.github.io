@@ -17,6 +17,6 @@ The framework encodes a wild-type protein once to construct a mutation-indexed a
 
 Across diverse assays, the model extrapolated from low-order measurements to unseen higher-order combinations and recovered experimentally observed epistatic patterns, including interactions between spatially close residues.
 
-**Status:** bioRxiv preprint, 2026. Under review at Nature Biotechnology.
+**Status:** bioRxiv preprint, 2026. Under review at Nature Methods.
 
 [Preprint](https://doi.org/10.64898/2026.09.24.753701) · [Code](https://github.com/xulab-research/Cerebra-Epistasis) · [Server](https://structpred.life.tsinghua.edu.cn/server_cerebra_epistasis.html)
